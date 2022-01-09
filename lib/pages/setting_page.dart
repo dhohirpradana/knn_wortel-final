@@ -31,8 +31,8 @@ class SettingPage extends StatelessWidget {
                   Icons.tag,
                   color: Colors.black,
                 ),
-                // hintText: 'Masukan nilai N',
-                labelText: 'Nilai N',
+                // hintText: 'Masukan Nilai K',
+                labelText: 'Nilai K',
               ),
               keyboardType: TextInputType.number,
               controller: controller,
@@ -41,7 +41,7 @@ class SettingPage extends StatelessWidget {
                   return 'Tidak boleh kosong!';
                 } else if (value == '0') {
                   return 'Tidak boleh nol!';
-                } else if (int.parse(value) == knnKualitasController.n) {
+                } else if (int.parse(value) == knnKualitasController.k) {
                   return 'Tidak ada perubahan nilai!';
                 }
                 return null;
@@ -96,12 +96,12 @@ class SettingPage extends StatelessWidget {
                     dialogType: DialogType.SUCCES,
                     body: const Center(
                       child: Text(
-                        'Berhasil update nilai N',
+                        'Berhasil update Nilai K',
                         style: TextStyle(fontStyle: FontStyle.italic),
                       ),
                     ),
-                    title: 'Update nilai N',
-                    desc: 'Ini adalah proses update nilai N',
+                    title: 'Update Nilai K',
+                    desc: 'Ini adalah proses update Nilai K',
                     btnOkOnPress: () {},
                   ).show();
                 }

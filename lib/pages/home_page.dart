@@ -261,7 +261,7 @@ class HomePage extends StatelessWidget {
                     : ListView.builder(
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
-                        itemCount: kualitasController.n,
+                        itemCount: kualitasController.k,
                         itemBuilder: (context, index) {
                           return ListTile(
                             tileColor:

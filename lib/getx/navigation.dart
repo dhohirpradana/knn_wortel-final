@@ -9,7 +9,7 @@ class NavigationController extends GetxController {
         ? 'KNN KLASIFIKASI WORTEL'
         : (data == 1)
             ? 'DATA TRAINING'
-            : (data == 1)
+            : (data == 2)
                 ? 'PENGATURAN'
                 : 'TENTANG';
     currentIndex = data;

@@ -3,18 +3,18 @@ import 'package:get_storage/get_storage.dart';
 
 class KNNKualitasController extends GetxController {
   //berapa tetangga terdekat yang menjadi acuan
-  int n = 5;
+  int k = 5;
 
   final box = GetStorage();
   String? kualitas;
   void getKualitas(List edList) {
     var sum = 0;
-    final int panjang = (n > edList.length) ? edList.length : n;
+    final int panjang = (k > edList.length) ? edList.length : k;
     for (var i = 0; i < panjang; i++) {
       sum = edList[i]['kualitas'] + sum;
     }
 
-    if (sum > n / 2) {
+    if (sum > k / 2) {
       kualitas = 'Layak';
     } else {
       kualitas = 'Tidak Layak';
@@ -31,8 +31,8 @@ class KNNKualitasController extends GetxController {
   }
 
   void updateN(int nData) {
-    n = nData;
+    k = nData;
     update();
-    box.write('n', n);
+    box.write('n', k);
   }
 }
